@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Віджет Погоди</title>
+    <style>
+        .weather-wiget{
+            padding: 20px;
+            background: dodgerblue;
+            border-radius: 20px;
+            max-width: 400px; 
+        }
+        .weather-info{
+             display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        #refresh-button{
+            width: 50px;
+            height: 50px;
+            background: url(./img/refresh_arrows_14418.ico) no-repeat;
+            background-size: contain;
+            border: none;
+        }
+        .temperature{
+            font-size: 40px;
+            color: #fff;
+            text-align: center;
+        }
+        .day{
+            display: flex;
+            gap: 10px;
+        }
+        .weather-info p{
+            color: #fff;
+            font-weight: 600;
+        } 
+        .weather{
+            font-size: 26px;
+            font-weight: 700;
+            text-align: center;
+            color: rgb(84, 251, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-wiget">
+      <center>
+        <img id="weather-icon" alt="Weather Icon" />
+      </center>
+        <div class="weather-info">
+            <div class="weather-left"> 
+                <p>Вологість: <span class="humidity"></span>%</p>
+                <p>Тиск: <span class="pressure"></span> hPa</p>
+                <p>Тиск: <span class="wind"></span> km/h SSE</p>
+            </div>
+            <div class="weather-rigth">
+                <div class="temperature"></div>
+               <p>По відчуттям: <span class="temperature-feels"></span></p>
+               <div class="weather"></div>
+                <div class="day">
+                    <p class="date-weather"></p>
+                    <p class="time-weather"></p>
+                    <button id="refresh-button"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
